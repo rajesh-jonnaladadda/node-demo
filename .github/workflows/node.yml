@@ -22,17 +22,19 @@ jobs:
         run: npm install
 
       - name: Run Application
-        run: node app.js  
+        run: node app.js
 
-      - name: Upload Artifact
+      - name: Show Current Directory
+        run: pwd
+
+      - name: Show Files
+        run: ls
+
+      - name: Show Hidden Files
+        run: ls -la
+
+      - name: Upload Project
         uses: actions/upload-artifact@v4
         with:
-         name: output-file
-         path: output.txt
-
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-         name: build
-         path: dist/   
+          name: node-demo
+          path: .
