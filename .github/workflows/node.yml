@@ -22,4 +22,10 @@ jobs:
         run: npm install
 
       - name: Run Application
-        run: node app.js
+        run: node app.js  
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+         name: output-file
+         path: output.txt
