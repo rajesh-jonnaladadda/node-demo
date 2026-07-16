@@ -11,3 +11,12 @@
   "license": "ISC",
   "type": "commonjs"
 }
+
+
+
+  {
+  "scripts": {
+    "build": "mkdir dist && copy app.js dist\\app.js",
+    "start": "node app.js"
+  }
+}
